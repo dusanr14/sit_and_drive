@@ -413,6 +413,8 @@ int sc_main(int argc, char*argv[])
 	
         myFile.open("baza.txt",ios::in); //otvaram fajl u read modu
        
+    //for(int k = 0; k < 100; k ++) //UNCOMMENT IF 1000
+    //{   			     //UNCOMMENT IF 1000
         matrixZero(wv);
 	if(myFile.is_open())
         {
@@ -435,11 +437,12 @@ int sc_main(int argc, char*argv[])
 		{
 			wv[j][NUMOFVAR+j]=1;
 		}
-	}
-    //print(wv);
+	//}                        //UNCOMMENT IF 1000
 
     simplexCalculate(wv);
-
+    }
+    
+    myFile.close();
     return 0;
 }
 
